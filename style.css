@@ -1,0 +1,116 @@
+:root {
+  --color-bg: #E7D8B7;
+  --color-text-main: #000000;
+  --color-primary: #FFFF00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+body {
+  font-family: HK Grotesk;
+  background-color: var(--color-bg);
+}
+
+button,
+input {
+  font-family: inherit;
+  font-size: 90%;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.instructions {
+  margin: 1rem auto 0;
+}
+
+h1 {
+  color: #543018;
+}
+h2 {
+  color: #543018;
+}
+
+a:link {
+  color: #bf8932;
+}
+
+a:visited {
+  color: #bf8932;
+}
+
+.smImg{
+  max-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+.mainImg {
+  max-width: 900px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
